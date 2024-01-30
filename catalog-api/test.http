@@ -1,0 +1,62 @@
+### Create categories
+POST http://localhost:8080/category HTTP/1.1
+Host: localhost
+Content-Type: application/json
+
+{
+    "name": "Category 1",
+    "description": "Category 1 description"
+}
+
+POST http://localhost:8080/category HTTP/1.1
+Host: localhost
+Content-Type: application/json
+
+{
+    "name": "Clothes",
+    "description": "Clothes description"
+}
+
+### Get category by id
+
+GET http://localhost:8080/category/69b53043-7be9-4a4d-99a2-1afb683ca007 HTTP/1.1
+Host: localhost
+Content-Type: application/json
+
+### List all categories
+
+GET http://localhost:8080/category HTTP/1.1
+Host: localhost
+Content-Type: application/json
+
+### Create product
+
+POST http://localhost:8080/product HTTP/1.1
+Host: localhost
+Content-Type: application/json
+
+{
+    "name": "Moletom OFF White Zara",
+    "description": "Moletom de cor branco OFF White da marca Zara com capuz",
+    "price": 300,
+    "category_id": "ee9d46d8-3a85-45ad-b36a-35e184e82051",
+    "image_url": "https://www.example.com/image.jpg"
+}
+
+### List all products
+
+GET http://localhost:8080/product HTTP/1.1
+Host: localhost
+Content-Type: application/json
+
+### Get product by id
+
+GET http://localhost:8080/product/4745bffd-1c06-4585-9e86-38a948540485 HTTP/1.1
+Host: localhost
+Content-Type: application/json
+
+### Get product by category id
+
+GET http://localhost:8080/product/category/ee9d46d8-3a85-45ad-b36a-35e184e82051 HTTP/1.1
+Host: localhost
+Content-Type: application/json

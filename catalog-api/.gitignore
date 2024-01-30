@@ -1,0 +1,5 @@
+# environment varibles
+.env
+
+# docker data
+mysql/
