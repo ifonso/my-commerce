@@ -1,0 +1,66 @@
+### Create product
+POST http://localhost:3000/products HTTP/1.1
+Host: localhost
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "description": "Product 1 description",
+    "image_url": "http://example.com",
+    "price": 100
+}
+
+### Get Product
+GET http://localhost:3000/products HTTP/1.1
+Host: localhost
+
+### Get Orders
+GET http://localhost:3000/orders HTTP/1.1
+Host: localhost
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lciI6ImpvaG4iLCJpYXQiOjE3MDY2NTk3MjEsImV4cCI6MTcwNjY2MzMyMX0.EXE-MmuCV6NR9gyp2F0w7gmZGLhuQWhmrh9hxtr1Pxs
+
+
+### Create orders
+POST http://localhost:3000/orders HTTP/1.1
+Host: localhost
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lciI6Im1hcmlhIiwiaWF0IjoxNzA2NjU5OTk0LCJleHAiOjE3MDY2NjM1OTR9.XCQXGV6nw4_Iiod11M8LoHeDa7lSJP7voKg4FW3tmf8
+
+{
+    "items": [
+        {
+            "quantity": 17,
+            "product_id": "hsdd-e2g1-f9e1d1ed-91de"
+        },
+        {
+            "quantity": 20,
+            "product_id": "gsdd-e2g1-f9e1d1ed-91de"
+        }
+    ],
+    "card_hash": "asdf786a786rf8hash"
+}
+
+### Create orders error
+POST http://localhost:3000/orders HTTP/1.1
+Host: localhost
+Content-Type: application/json
+
+{
+    "items": [
+        {
+            "quantity": "olá",
+            "product_id": "aadd-e2g1-f9e1d1ed-91aa"
+        }
+    ],
+    "card_hash": "asdf786a786rf8hash"
+}
+
+### Login
+POST http://localhost:3000/auth/login HTTP/1.1
+Host: localhost
+Content-Type: application/json
+
+{
+    "username": "maria",
+    "password": "pass"
+}
